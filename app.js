@@ -26,9 +26,9 @@
 
 //DOCUMENT OBJECT MODEL (DOM)
 // query selectors are used to grab elements in the HTML
-const para = document.querySelector('body > h1');
+// const para = document.querySelector('body > h1');
 
-console.log(para);
+// console.log(para);
 
 //grabbing multiple elememts
 
@@ -39,6 +39,43 @@ console.log(para);
 // });
 // console.log(paras[2]);
 
-const errors = document.querySelectorAll(".error");
+//const errors = document.querySelectorAll(".error");
 
-console.log(errors);
+//console.log(errors);
+
+// get element by ID
+// const title = document.getElementById('page-title');
+
+// console.log(title);
+
+// // get element by thier class name
+
+// const errors = document.getElementsByClassName("error");
+
+// console.log(errors);
+
+// //get element by their tag ncame
+
+// const paras = document.getElementsByTagName('p')
+
+// console.log(paras);
+// console.log(paras[2]);
+
+const para = document.querySelector('p');
+
+// console.log(para.innerText);
+
+// para.innerText = 'guten morgen';
+
+// const paras = document.querySelectorAll('p');
+
+// paras.forEach(para => {
+//     console.log(para.innerText);
+//     para.innerText+= 'new text'
+// });
+
+//changing HTML in a div 
+
+const content = document.querySelector('.content');
+
+
