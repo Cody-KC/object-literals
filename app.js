@@ -76,17 +76,30 @@ const para = document.querySelector('p');
 
 //changing HTML in a div 
 
-const content = document.querySelector('.content');
+// const content = document.querySelector('.content');
 
-console.log(content.innerHTML);
+// console.log(content.innerHTML);
 
 // if you want to update the html element
 
 //content.innerHTML = '<h2>This is a new content</h2>'
 
-const people = ['mario', 'luigi', 'cody'];
+// const people = ['mario', 'luigi', 'cody'];
 
-people.forEach(person =>{
-    content.innerHTML += `<p>${person}</p>`;
-});
+// people.forEach(person =>{
+//     content.innerHTML += `<p>${person}</p>`;
+// });
+
+
+//updating attributes of HTML elements
+//getting and setting attributes
+
+const link = document.querySelector('a');
+
+console.log(link.getAttribute('href'));
+
+link.setAttribute('href', 'https://www.cody.de');
+link.innerText = 'Cody first website';
+
+
 
