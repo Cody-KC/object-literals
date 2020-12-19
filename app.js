@@ -78,4 +78,15 @@ const para = document.querySelector('p');
 
 const content = document.querySelector('.content');
 
+console.log(content.innerHTML);
+
+// if you want to update the html element
+
+//content.innerHTML = '<h2>This is a new content</h2>'
+
+const people = ['mario', 'luigi', 'cody'];
+
+people.forEach(person =>{
+    content.innerHTML += `<p>${person}</p>`;
+});
 
