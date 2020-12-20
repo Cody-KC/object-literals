@@ -94,12 +94,31 @@ const para = document.querySelector('p');
 //updating attributes of HTML elements
 //getting and setting attributes
 
-const link = document.querySelector('a');
+// const link = document.querySelector('a');
 
-console.log(link.getAttribute('href'));
+// console.log(link.getAttribute('href'));
 
-link.setAttribute('href', 'https://www.cody.de');
-link.innerText = 'Cody first website';
+// link.setAttribute('href', 'https://www.cody.de');
+// link.innerText = 'Cody first website';
 
+// const message = document.querySelector('p');
 
+// console.log(message.getAttribute("class"));
+// message.setAttribute("class", "success");
 
+// //setting attribute for classes that doesnt exist before
+
+// message.setAttribute("style", "color:green");
+
+//changing css styles
+
+const title = document.querySelector("h1");
+
+//title.setAttribute("style", "margin:50px"); //this process overrides the previous style in the HTML
+
+console.log(title.style);
+console.log(title.style.color);
+
+title.style.margin = "50px";
+title.style.color = "blue";
+title.style.color = '';
