@@ -61,7 +61,7 @@
 // console.log(paras);
 // console.log(paras[2]);
 
-const para = document.querySelector('p');
+//const para = document.querySelector('p');
 
 // console.log(para.innerText);
 
@@ -112,13 +112,42 @@ const para = document.querySelector('p');
 
 //changing css styles
 
-const title = document.querySelector("h1");
+// const title = document.querySelector("h1");
 
-//title.setAttribute("style", "margin:50px"); //this process overrides the previous style in the HTML
+// //title.setAttribute("style", "margin:50px"); //this process overrides the previous style in the HTML
 
-console.log(title.style);
-console.log(title.style.color);
+// console.log(title.style);
+// console.log(title.style.color);
 
-title.style.margin = "50px";
-title.style.color = "blue";
-title.style.color = '';
+// title.style.margin = "50px";
+// title.style.color = "blue";
+// title.style.color = '';
+
+// const content = document.querySelector("p");
+// console.log(content.classList);
+// content.classList.add("error");
+// content.classList.remove("error");
+// content.classList.add("success");
+
+
+//advanced adding and removing of classes
+const paras = document.querySelectorAll("p");
+
+paras.forEach(p => {
+    if (p.textContent.includes('error')){
+        p.classList.add('error');
+    }
+    if (p.textContent.includes('success')){
+        p.classList.add('success');
+    }
+    if (p.textContent.includes('has')){
+        p.classList.add('has');
+    }
+});
+
+//how to toggle classes
+// if an element has a class, we remove it, if it doesnt we add it.
+
+const title = document.querySelector('.title');
+
+title.classList.toggle('text');
