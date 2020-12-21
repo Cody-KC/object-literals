@@ -148,6 +148,25 @@ paras.forEach(p => {
 //how to toggle classes
 // if an element has a class, we remove it, if it doesnt we add it.
 
-const title = document.querySelector('.title');
+// const title = document.querySelector('.title');
 
-title.classList.toggle('text');
+// title.classList.toggle('text');
+// title.classList.toggle('text');
+
+//Parent children and  siblings
+
+const article = document.querySelector('article');
+
+// console.log(article.children);
+
+// console.log(Array.from(article.children))
+//conversion into an array does not alter the previous state of article.children
+
+// Array.from(article.children).forEach(child => {
+//     child.classList.add('article-element')
+// })
+
+const title = document.querySelector('h2');
+
+console.log(title.parentElement);
+console.log(title.nextElementSibling);
