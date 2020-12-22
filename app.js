@@ -166,7 +166,30 @@ const article = document.querySelector('article');
 //     child.classList.add('article-element')
 // })
 
-const title = document.querySelector('h2');
+// const title = document.querySelector('h2');
 
-console.log(title.parentElement);
-console.log(title.nextElementSibling);
+// console.log(title.parentElement);
+// console.log(title.nextElementSibling);
+// console.log(title.previousElementSibling);
+
+// //chaining 
+
+// console.log(title.nextElementSibling.parentElement.children);
+
+const button = document.querySelector('button');
+
+button.addEventListener("click", () => {
+    console.log('you clicked here');
+});
+
+const list = document.querySelectorAll("li");
+
+list.forEach(lists =>{
+    lists.addEventListener('click', e =>{
+        console.log(e.target);
+        console.log(lists);
+        e.target.style.textDecoration = "line-through";
+    });
+});
+// "e" defines the particular tag that was clicked ".target" displays the clicked tag.
+
