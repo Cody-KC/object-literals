@@ -176,11 +176,20 @@ const article = document.querySelector('article');
 
 // console.log(title.nextElementSibling.parentElement.children);
 
+
 const button = document.querySelector('button');
 
 button.addEventListener("click", () => {
-    console.log('you clicked here');
+    //ul.innerHTML += '<li>soemthing new</li>'; 
+    // alternatively,
+    const li = document.createElement('li');
+    li.textContent = 'something new'
+    //ul.append(li);
+    ul.prepend(li)
 });
+ const ul = document.querySelector("ul");
+// ul.remove();
+
 
 const list = document.querySelectorAll("li");
 
@@ -188,7 +197,8 @@ list.forEach(lists =>{
     lists.addEventListener('click', e =>{
         console.log(e.target);
         console.log(lists);
-        e.target.style.textDecoration = "line-through";
+        //e.target.style.textDecoration = "line-through";
+        e.target.remove();
     });
 });
 // "e" defines the particular tag that was clicked ".target" displays the clicked tag.
