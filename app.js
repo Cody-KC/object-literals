@@ -193,13 +193,26 @@ button.addEventListener("click", () => {
 
 const list = document.querySelectorAll("li");
 
-list.forEach(lists =>{
-    lists.addEventListener('click', e =>{
-        console.log(e.target);
-        console.log(lists);
-        //e.target.style.textDecoration = "line-through";
-        e.target.remove();
-    });
-});
+
+// list.forEach(lists =>{
+//     lists.addEventListener('click', e =>{
+//         // console.log(e.target);
+//         // console.log(lists);
+//         console.log('event in LI');
+//         e.stopPropagation(); // this stops events from bubbling up into UL
+//         //e.target.style.textDecoration = "line-through";
+//         //e.target.remove();
+//     });
+// });
 // "e" defines the particular tag that was clicked ".target" displays the clicked tag.
 
+//event bubbling
+//we already have a reference to the ul in line 190
+
+ul.addEventListener("click", e => {
+    console.log(e.target);
+    //attaching event listeners to the parent tag (ul) is better way, it accomodates both the new child tags
+    if (e.target.tagName === 'LI'){
+        e.target.remove();
+    }
+});
