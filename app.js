@@ -177,21 +177,21 @@ const article = document.querySelector('article');
 // console.log(title.nextElementSibling.parentElement.children);
 
 
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-button.addEventListener("click", () => {
-    //ul.innerHTML += '<li>soemthing new</li>'; 
-    // alternatively,
-    const li = document.createElement('li');
-    li.textContent = 'something new'
-    //ul.append(li);
-    ul.prepend(li)
-});
- const ul = document.querySelector("ul");
-// ul.remove();
+// button.addEventListener("click", () => {
+//     //ul.innerHTML += '<li>soemthing new</li>'; 
+//     // alternatively,
+//     const li = document.createElement('li');
+//     li.textContent = 'something new'
+//     //ul.append(li);
+//     ul.prepend(li)
+// });
+//  const ul = document.querySelector("ul");
+// // ul.remove();
 
 
-const list = document.querySelectorAll("li");
+// const list = document.querySelectorAll("li");
 
 
 // list.forEach(lists =>{
@@ -209,10 +209,31 @@ const list = document.querySelectorAll("li");
 //event bubbling
 //we already have a reference to the ul in line 190
 
-ul.addEventListener("click", e => {
-    console.log(e.target);
-    //attaching event listeners to the parent tag (ul) is better way, it accomodates both the new child tags
-    if (e.target.tagName === 'LI'){
-        e.target.remove();
-    }
+// ul.addEventListener("click", e => {
+//     console.log(e.target);
+//     //attaching event listeners to the parent tag (ul) is better way, it accomodates both the new child tags
+//     if (e.target.tagName === 'LI'){
+//         e.target.remove();
+//     }
+// });
+
+//more about DOM events
+
+const copy = document.querySelector(".copy-me");
+
+copy.addEventListener("copy", () => {
+    console.log("gosh! my content is copy right");
+});
+
+const box = document.querySelector(".box");
+
+box.addEventListener("mousemove", e =>{
+    console.log(e)
+    console.log(e.offsetX, e.offsetY);
+    box.textContent = `x pos - ${e.offsetX}  and y pos ${e.offsetY}`; 
+    //to determine the position of the cursor in the web page.
+});
+
+document.addEventListener('wheel', e =>{
+    console.log(e.pageX, e.pageY);
 });
