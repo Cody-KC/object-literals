@@ -219,21 +219,36 @@ const article = document.querySelector('article');
 
 //more about DOM events
 
-const copy = document.querySelector(".copy-me");
+// const copy = document.querySelector(".copy-me");
 
-copy.addEventListener("copy", () => {
-    console.log("gosh! my content is copy right");
+// copy.addEventListener("copy", () => {
+//     console.log("gosh! my content is copy right");
+// });
+
+// const box = document.querySelector(".box");
+
+// box.addEventListener("mousemove", e =>{
+//     console.log(e)
+//     console.log(e.offsetX, e.offsetY);
+//     box.textContent = `x pos - ${e.offsetX}  and y pos ${e.offsetY}`; 
+//     //to determine the position of the cursor in the web page.
+// });
+
+// document.addEventListener('wheel', e =>{
+//     console.log(e.pageX, e.pageY);
+// });
+const button = document.querySelector("button");
+const popup = document.querySelector(".popup-wrapper")
+const closeButton = document.querySelector('.popup-close');
+
+
+button.addEventListener("click", () =>{
+    popup.style.display = "block";
 });
 
-const box = document.querySelector(".box");
-
-box.addEventListener("mousemove", e =>{
-    console.log(e)
-    console.log(e.offsetX, e.offsetY);
-    box.textContent = `x pos - ${e.offsetX}  and y pos ${e.offsetY}`; 
-    //to determine the position of the cursor in the web page.
+closeButton.addEventListener("click", () =>{
+    popup.style.display = "none";
 });
-
-document.addEventListener('wheel', e =>{
-    console.log(e.pageX, e.pageY);
+popup.addEventListener("click", () =>{
+    popup.style.display = "none";
 });
