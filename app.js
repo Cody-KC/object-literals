@@ -131,19 +131,19 @@
 
 
 //advanced adding and removing of classes
-const paras = document.querySelectorAll("p");
+// const paras = document.querySelectorAll("p");
 
-paras.forEach(p => {
-    if (p.textContent.includes('error')){
-        p.classList.add('error');
-    }
-    if (p.textContent.includes('success')){
-        p.classList.add('success');
-    }
-    if (p.textContent.includes('has')){
-        p.classList.add('has');
-    }
-});
+// paras.forEach(p => {
+//     if (p.textContent.includes('error')){
+//         p.classList.add('error');
+//     }
+//     if (p.textContent.includes('success')){
+//         p.classList.add('success');
+//     }
+//     if (p.textContent.includes('has')){
+//         p.classList.add('has');
+//     }
+// });
 
 //how to toggle classes
 // if an element has a class, we remove it, if it doesnt we add it.
@@ -237,18 +237,43 @@ const article = document.querySelector('article');
 // document.addEventListener('wheel', e =>{
 //     console.log(e.pageX, e.pageY);
 // });
-const button = document.querySelector("button");
-const popup = document.querySelector(".popup-wrapper")
-const closeButton = document.querySelector('.popup-close');
+// const button = document.querySelector("button");
+// const popup = document.querySelector(".popup-wrapper")
+// const closeButton = document.querySelector('.popup-close');
 
 
-button.addEventListener("click", () =>{
-    popup.style.display = "block";
-});
+// button.addEventListener("click", () =>{
+//     popup.style.display = "block";
+// });
 
-closeButton.addEventListener("click", () =>{
-    popup.style.display = "none";
-});
-popup.addEventListener("click", () =>{
-    popup.style.display = "none";
-});
+// closeButton.addEventListener("click", () =>{
+//     popup.style.display = "none";
+// });
+// popup.addEventListener("click", () =>{
+//     popup.style.display = "none";
+// });
+
+//DATES AND TIMES
+const now = new Date();
+
+console.log(now);
+console.log(typeof now);
+
+
+//years, months, days times
+console.log('getFullTear', now.getFullYear());
+console.log('getMonth', now.getMonth());
+console.log('getDate', now.getDate());
+console.log('getDay', now.getDay());
+console.log('getHours', now.getHours());
+console.log('getMinutes', now.getMinutes());
+console.log('getSeconds', now.getSeconds());
+
+//timestamp
+
+console.log('timestamp', now.getTime());
+
+//date strings
+console.log(now.toDateString());
+console.log(now.toTimeString());
+console.log(now.toLocaleString());
