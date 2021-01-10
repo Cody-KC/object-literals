@@ -1,4 +1,4 @@
-body{
+/* body{
     background: #eee;
 }
 
@@ -19,4 +19,21 @@ input{
 }
 .fail{
     border: 2px solid red;
+} */
+
+body{
+    background-color: black;
+}
+
+.clock{
+    font-size: 4em;
+    text-align: center;
+    margin: 220px auto;
+    color:blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.clock span{
+    padding:20px;
+    background-color: chocolate;
 }
